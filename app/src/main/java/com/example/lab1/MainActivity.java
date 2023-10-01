@@ -20,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
         this.TextWindow = findViewById(R.id.TextWindow);
 
         Button Buttonchik = (Button) findViewById(R.id.Buttonchik);
+        Button Colorbtn = (Button) findViewById(R.id.Colorbtn);
         Buttonchik.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 TextWindow.setText("New text)");
             }
         });
+
+        Button Color = findViewById(R.id.Colorbtn);
+        Color.setTextColor(getResources().getColor(R.color.white));
+
     }
 }
