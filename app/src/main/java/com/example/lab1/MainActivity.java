@@ -4,32 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView TextWindow;
+    private TextView Text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.TextWindow = findViewById(R.id.TextWindow);
+        this.Text=findViewById(R.id.Text);
+    }
 
-        Button Buttonchik = (Button) findViewById(R.id.Buttonchik);
-        Button Colorbtn = (Button) findViewById(R.id.Colorbtn);
-        Buttonchik.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                TextWindow.setText("New text)");
-            }
-        });
-
-        Button Color = findViewById(R.id.Colorbtn);
-        Color.setTextColor(getResources().getColor(R.color.white));
-
+    public void Change(View view) {
+        this.Text.setText("New text)");
     }
 }
